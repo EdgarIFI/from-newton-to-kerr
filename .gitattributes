@@ -1,0 +1,61 @@
+# Git attributes for from-newton-to-kerr
+#
+# Purpose: normalize repository text content to LF inside Git so that the
+# canonical history is platform-independent, regardless of the checkout OS.
+# Binary formats are declared explicitly so Git never attempts line-ending
+# conversion or textual diffing on them.
+
+# Safe default: let Git detect text and normalize it to LF in the repository.
+* text=auto
+
+# ---------------------------------------------------------------------------
+# Project text formats: explicit text classification with LF endings
+# ---------------------------------------------------------------------------
+
+# Documentation and governance prose
+*.md        text eol=lf
+
+# LaTeX sources
+*.tex       text eol=lf
+*.sty       text eol=lf
+*.cls       text eol=lf
+
+# BibTeX
+*.bib       text eol=lf
+
+# Structured data and metadata
+*.yaml      text eol=lf
+*.yml       text eol=lf
+*.cff       text eol=lf
+*.toml      text eol=lf
+*.json      text eol=lf
+
+# Shell scripts
+*.sh        text eol=lf
+
+# Plain text
+*.txt       text eol=lf
+
+# Editor and Git configuration files
+.editorconfig   text eol=lf
+.gitattributes  text eol=lf
+.gitignore      text eol=lf
+
+# License files (extensionless, exact repository-root filenames)
+LICENSE-CODE    text eol=lf
+LICENSE-DOCS    text eol=lf
+
+# ---------------------------------------------------------------------------
+# Binary formats: no line-ending conversion, no textual diff
+# ---------------------------------------------------------------------------
+
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.bmp       binary
+*.tif       binary
+*.tiff      binary
+*.ico       binary
+*.webp      binary
+*.pdf       binary

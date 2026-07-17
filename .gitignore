@@ -1,0 +1,85 @@
+# Git ignore rules for from-newton-to-kerr
+#
+# Scope is deliberately narrow: local-only inputs, operating-system and editor
+# noise, and LaTeX build products. No Python, notebook, test, result, or solver
+# patterns are declared, because no such architecture is authorized yet.
+
+# ---------------------------------------------------------------------------
+# Local-only historical inputs (must never be tracked)
+# ---------------------------------------------------------------------------
+.ntk-local-inputs/
+
+# ---------------------------------------------------------------------------
+# Operating-system filesystem noise
+# ---------------------------------------------------------------------------
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ---------------------------------------------------------------------------
+# Editor local workspace and user state
+#
+# .vscode/ is NOT ignored wholesale: repository-level configuration such as
+# extensions.json or settings.json may later be intentionally committed.
+# Only per-user and per-machine state is excluded.
+# ---------------------------------------------------------------------------
+.history/
+*.code-workspace
+
+# ---------------------------------------------------------------------------
+# LaTeX generated files
+# ---------------------------------------------------------------------------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# ---------------------------------------------------------------------------
+# LaTeX build directories beneath document roots
+# ---------------------------------------------------------------------------
+governance/**/build/
+monograph/**/build/
+
+# ---------------------------------------------------------------------------
+# Generated monograph working artifact
+#
+# Only this specific generated PDF is ignored. PDF is not globally ignored,
+# because it may later be an authorized source format for vector figures or
+# external documentation.
+# ---------------------------------------------------------------------------
+monograph/main.pdf
