@@ -2,12 +2,14 @@
 
 | Field | Value |
 | --- | --- |
-| Record status | DRAFT |
+| Record status | ACCEPTED |
 | Record date | 17 July 2026 |
+| Acceptance authority | NTK-MASTER |
+| Acceptance date | 17 July 2026 |
 | Responsible owner | Edgar Axel Pérez Flores |
 | Governing workstream | `[NTK-P00B]` Repository and Collaboration Foundation |
-| Related decision | `RDR-0001` |
-| Canonical-transition state | Proposed, not yet adopted |
+| Related decision | `RDR-0001` — RATIFIED |
+| Canonical-transition state | AUTHORIZED — NOT YET EFFECTIVE |
 
 ---
 
@@ -20,8 +22,8 @@ This is an **evidentiary provenance record**, not an independent governance inst
 ## 2. Authority Boundary
 
 - The master project record recognizes the substantive Scientific Constitution and the Project Governance and Repository Charter as **ratified**.
-- Until `RDR-0001` and the Markdown transpositions are ratified through NTK-MASTER and merged, **no new canonical-format transition has occurred**. The current canonical representation is unchanged by this record.
-- If `RDR-0001` is adopted, the Markdown documents become canonical and these LaTeX files remain **provenance evidence only**.
+- `RDR-0001` has been **ratified by NTK-MASTER** and its implementation is **authorized**, but the **canonical-format transition is not yet effective**. Until the Markdown transpositions are prepared, audited, reviewed, signed off, and merged through the protected-`main` workflow, **no new canonical-format transition has occurred**. The current canonical representation is unchanged by this record.
+- Upon completion of the adoption conditions and merge of the Markdown transpositions, the Markdown documents become canonical and these LaTeX files remain **provenance evidence only**.
 - The originals may **not** later be used as a competing source of governance authority, nor to override, reinterpret, or amend the Markdown canon once that canon is adopted.
 
 ## 3. Original Input Inventory
@@ -65,7 +67,10 @@ No command output beyond the facts stated here is asserted.
 - Subsequently recorded as **ratified** by the master project state.
 - Selected, as a local-only source, to be the transposition input for the canonical Markdown document.
 - Cryptographic identity captured on 17 July 2026.
-- Markdown adoption remains **proposed** under `RDR-0001`.
+- `RDR-0001` is ratified and its implementation is authorized. The Markdown
+  outputs have no adopted canonical authority until the adoption conditions
+  are met and the transpositions are merged through protected `main`; the
+  canonical transition remains **not yet effective**.
 
 **Input 01 — Project Governance and Repository Charter.**
 
@@ -73,7 +78,10 @@ No command output beyond the facts stated here is asserted.
 - Subsequently recorded as **ratified** by the master project state.
 - Selected, as a local-only source, to be the transposition input for the canonical Markdown document.
 - Cryptographic identity captured on 17 July 2026.
-- Markdown adoption remains **proposed** under `RDR-0001`.
+- `RDR-0001` is ratified and its implementation is authorized. The Markdown
+  outputs have no adopted canonical authority until the adoption conditions
+  are met and the transpositions are merged through protected `main`; the
+  canonical transition remains **not yet effective**.
 
 No exact historical signature time and no unrecorded personal acknowledgement date are asserted for either document.
 
@@ -108,6 +116,13 @@ The transpositions may **not** contain any of the following:
 - The repository stores only this identity and provenance record, not the source inputs themselves.
 - Redistribution of the source inputs is unnecessary once the faithful transposition and the human comparison are complete.
 - Edgar Axel Pérez Flores retains responsibility for the original local copies during Gate 0B.
+
+### 7.1 Durable private retention rule
+
+The exact original LaTeX byte streams shall remain unchanged and retained outside Git in a durable private archive for the lifetime of the project, unless a later ratified Repository Decision Record explicitly authorizes a different retention policy.
+
+- This retention does **not** give the originals any continuing governance authority. After canonical adoption they remain **immutable provenance evidence only**, with no power to override, reinterpret, or amend the Markdown canon.
+- A cryptographic digest identifies a byte stream but does **not** substitute for preserving the byte stream itself. The recorded SHA-256 and byte-level identities in Section 3 bind and verify the originals; they do not replace the durable retention of the actual bytes.
 
 ## 8. Reverification Procedure
 
@@ -148,8 +163,11 @@ A reverification is successful when both SHA-256 tools agree with each other and
 
 ## 10. Current State
 
+- This provenance basis is **accepted by NTK-MASTER**.
 - Both source inputs verified.
 - Both hashes independently reproduced, in exact agreement.
 - Both inputs ignored and untracked.
-- Repository canonical transition **pending**.
-- Next step: human review of this record and of `RDR-0001`.
+- Durable private retention of the exact original byte streams is **required** (Section 7.1).
+- Transposition implementation is **authorized**.
+- The repository canonical transition is **not yet effective**.
+- Next step: create and audit the two Markdown transpositions — `governance/00_Scientific_Constitution_From_Newton_to_Kerr.md` and `governance/01_Project_Governance_and_Repository_Charter.md` — and the permanent transposition audit at `governance/provenance/RDR-0001_TRANSPOSITION_AUDIT.md`.

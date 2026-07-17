@@ -4,23 +4,27 @@
 | --- | --- |
 | Record ID | `RDR-0001` |
 | Record type | Repository Decision Record |
-| Status | PROPOSED |
+| Repository decision status | ACCEPTED |
+| Master decision | RATIFIED |
+| Master decision date | 17 July 2026 |
 | Change class | Class A |
-| Date proposed | 17 July 2026 |
 | Governing workstream | `[NTK-P00B]` Repository and Collaboration Foundation |
 | Decision owner | Edgar Axel Pérez Flores |
 | Required collaborator reviewer | Naomi Sánchez Torres |
 | Master ratification authority | NTK-MASTER |
-| Implementation state | Not adopted; Markdown transposition has not yet been created |
-| Affected artifacts | Original LaTeX inputs `.ntk-local-inputs/00_Scientific_Constitution_From_Newton_to_Kerr.tex` and `.ntk-local-inputs/01_Project_Governance_and_Repository_Charter.tex`; proposed Markdown paths `governance/00_Scientific_Constitution_From_Newton_to_Kerr.md` and `governance/01_Project_Governance_and_Repository_Charter.md` |
+| Implementation authorization | AUTHORIZED |
+| Implementation state | AUTHORIZED — NOT YET EFFECTIVE |
+| Canonical transition | PENDING ADOPTION CONDITIONS |
+| Submitted source commit | `637192b5e7709c0e6f2e28b3d24ea2693dd48dae` |
+| Affected artifacts | Original LaTeX inputs `.ntk-local-inputs/00_Scientific_Constitution_From_Newton_to_Kerr.tex` and `.ntk-local-inputs/01_Project_Governance_and_Repository_Charter.tex`; authorized Markdown paths `governance/00_Scientific_Constitution_From_Newton_to_Kerr.md` and `governance/01_Project_Governance_and_Repository_Charter.md` |
 
 ---
 
 ## 1. Purpose
 
-This record proposes a controlled transposition of the two foundational governance documents — the Scientific Constitution and the Project Governance and Repository Charter — with respect to two dimensions only: their **canonical file format** and their **settled-state metadata**. The proposal is to adopt Markdown as the canonical repository representation of these documents and to correct their surface metadata from foundational-draft wording to the settled, ratified state already recorded in the master project record.
+This record establishes a controlled transposition of the two foundational governance documents — the Scientific Constitution and the Project Governance and Repository Charter — with respect to two dimensions only: their **canonical file format** and their **settled-state metadata**. The ratified decision is to adopt Markdown as the canonical repository representation of these documents and to correct their surface metadata from foundational-draft wording to the settled, ratified state already recorded in the master project record. NTK-MASTER ratified this decision on 17 July 2026; implementation is authorized, and the canonical-format transition remains not yet effective until the adoption conditions in Section 6 are satisfied.
 
-This record does **not** create a new scientific constitution or a new charter. It does not re-open, re-derive, or re-ratify the scientific or governance substance of either document. The substantive content of both instruments was ratified, and that ratified state is recorded in the master project record dated 16 July 2026; the ratification is presupposed here and is preserved intact. What is proposed is a change of representation and of settled-state description, not a change of meaning.
+This record does **not** create a new scientific constitution or a new charter. It does not re-open, re-derive, or re-ratify the scientific or governance substance of either document. The substantive content of both instruments was ratified, and that ratified state is recorded in the master project record dated 16 July 2026; the ratification is presupposed here and is preserved intact. The decision ratified by NTK-MASTER concerns a change of representation and of settled-state description, not a change of meaning.
 
 ## 2. Context
 
@@ -32,7 +36,7 @@ Repository foundation work is now active under Gate 0B on the working branch `fo
 
 This change is **not purely mechanical**. Several ratified Gate 0B requirements presupposed that the governance documents would exist as `.tex` files and would be produced by LaTeX compilation — for example, canonical `.tex` governance paths in the initial architecture, clean-clone compilation of the governance documents, and continuous-integration compilation targeting them. Adopting Markdown as the canonical governance format changes those presupposed requirements. Because it alters ratified Gate 0B requirements, the change is a Class A change and must be represented by this record and ratified through NTK-MASTER before merge. The original decision-register entries must not be silently rewritten to make this transition appear to have been part of the original plan.
 
-## 3. Proposed Decision
+## 3. Accepted Decision
 
 ### 3.1 Canonical format and paths
 
@@ -47,10 +51,10 @@ The long filename stems are retained deliberately so that the canonical Markdown
 
 ### 3.2 Authority transition
 
-The authority relationship is stated here conditionally and precisely, because as of this record no transition has occurred:
+The authority relationship is stated here conditionally and precisely. NTK-MASTER has ratified this record and authorized its implementation, but the canonical-format transition is not yet effective: master ratification of `RDR-0001` alone did not change the canonical governance files.
 
-- **Before** ratification and merge of this record *and* of the Markdown transpositions, the proposed Markdown files have **no adopted authority**. They do not yet exist as adopted instruments, and no canonical-format transition is in effect.
-- **Upon** ratification through NTK-MASTER, completion of collaborator review, successful foundation checks, and merge through the protected-`main` workflow, the Markdown files become the **canonical repository governance instruments**.
+- **Before** protected-`main` adoption — that is, before the Markdown transpositions are created, audited, compared, independently reviewed, signed off, and merged through the protected-`main` workflow — the authorized Markdown files have **no adopted authority**. They do not yet exist as adopted instruments, and no canonical-format transition is in effect.
+- **Upon** completion of the adoption conditions in Section 6 — human comparison, collaborator review, final scientific sign-off, successful foundation checks, and merge through the protected-`main` workflow — the Markdown files become the **canonical repository governance instruments**.
 - At that point the LaTeX originals become **provenance inputs only**. They carry no independent authority to override, reinterpret, or amend the Markdown canon, and they may not be used as a competing source of governance authority.
 - The **ratification of the substantive Constitution and Charter is preserved** throughout. Only the canonical representation (format) and the settled-state metadata (tense and status wording) are transposed. No substantive re-ratification is asserted or required by this record.
 
@@ -97,9 +101,9 @@ That record must contain the exact cryptographic identities of both original LaT
 
 ## 4. Explicit Supersessions and Clarifications
 
-The following table states, for each affected earlier requirement, its source area, the proposed disposition, and what remains unchanged. This table is the explicit record of supersession required by Section 3.4; nothing in the historical registers is edited to achieve these effects.
+The following table states, for each affected earlier requirement, its source area, the ratified disposition, and what remains unchanged. This table is the explicit record of supersession required by Section 3.4; nothing in the historical registers is edited to achieve these effects.
 
-| Earlier requirement | Source area | Proposed disposition | What remains unchanged |
+| Earlier requirement | Source area | Ratified disposition | What remains unchanged |
 | --- | --- | --- | --- |
 | Canonical `.tex` governance paths | Initial repository architecture | Superseded by the two exact `.md` paths: `governance/00_Scientific_Constitution_From_Newton_to_Kerr.md` and `governance/01_Project_Governance_and_Repository_Charter.md` | The identity and substance of the two governance documents; their long filename stems |
 | Clean-clone build of governance **and** monograph documents | Gate 0B build requirement | Governance compilation retired; monograph scaffold clean-clone build retained | The monograph scaffold build remains mandatory and reproducible |
@@ -136,7 +140,7 @@ Any apparent substantive drift discovered in the Markdown transpositions is by d
 
 ## 6. Adoption Conditions
 
-Adoption of this record and of the resulting canonical Markdown transition requires **all** of the following:
+Adoption of this record and of the resulting canonical Markdown transition requires **all** of the following. Condition 1 is now satisfied — NTK-MASTER ratified `RDR-0001` on 17 July 2026 — and the remaining conditions stay pending:
 
 1. NTK-MASTER ratification of `RDR-0001`;
 2. faithful Markdown transposition of both governance documents;
@@ -149,7 +153,7 @@ Adoption of this record and of the resulting canonical Markdown transition requi
 9. no forbidden architecture and no unsupported scientific claim introduced;
 10. the foundation pull request merged through the protected-`main` workflow.
 
-Until every one of these conditions is satisfied, the proposed Markdown documents have no adopted authority.
+Until every one of these conditions is satisfied, the authorized Markdown documents have no adopted authority, and the canonical transition remains not yet effective.
 
 ## 7. Risks and Mitigations
 
@@ -165,13 +169,13 @@ Until every one of these conditions is satisfied, the proposed Markdown document
 
 ## 8. Alternatives Considered
 
-**A. Keep LaTeX as the sole canonical governance format.** The governance documents would remain `.tex` files and would retain the previously planned compilation requirements. This preserves the original toolchain but provides a less accessible rendered experience for casual GitHub readers and makes browser-first review less convenient. This alternative is not selected in the present proposal.
+**A. Keep LaTeX as the sole canonical governance format.** The governance documents would remain `.tex` files and would retain the previously planned compilation requirements. This preserves the original toolchain but provides a less accessible rendered experience for casual GitHub readers and makes browser-first review less convenient. This alternative was not selected in this ratified decision.
 
-**B. Maintain LaTeX and Markdown as co-equal canonical sources.** Both formats would be authoritative simultaneously. **This alternative is not selected in the present proposal.** Co-equal canonical sources create a standing dual-authority hazard: any divergence between the two representations produces genuine ambiguity about which governs, invites silent drift, and forces every reviewer and every check to reconcile two sources of truth. Governance requires a single canonical instrument.
+**B. Maintain LaTeX and Markdown as co-equal canonical sources.** Both formats would be authoritative simultaneously. **This alternative was not selected in this ratified decision.** Co-equal canonical sources create a standing dual-authority hazard: any divergence between the two representations produces genuine ambiguity about which governs, invites silent drift, and forces every reviewer and every check to reconcile two sources of truth. Governance requires a single canonical instrument.
 
 **C. Use Markdown as the canonical governance format with hashed LaTeX provenance.** Markdown becomes the single canonical format at the two exact paths; the LaTeX originals are retained locally, unmodified and untracked, and bound to the canon by exact cryptographic identity in the provenance record. This yields a single source of authority, a browser-reviewable public canon, and a verifiable evidentiary link back to the ratified originals.
 
-**Alternative C is the proposed alternative.** It resolves the dual-authority hazard that defeats Alternative B while retaining full provenance, and it delivers the public-review benefits that Alternative A cannot.
+**Alternative C is the selected and ratified alternative.** NTK-MASTER ratified it on 17 July 2026. It resolves the dual-authority hazard that defeats Alternative B while retaining full provenance, and it delivers the public-review benefits that Alternative A cannot.
 
 ## 9. Consequences
 
@@ -190,27 +194,34 @@ Until every one of these conditions is satisfied, the proposed Markdown document
 
 **Deferred work.**
 
-- Creation of the two Markdown transpositions (not authorized by this record alone).
+- Creation of the two Markdown transpositions (now authorized as the next implementation step; they do not become canonical until the adoption conditions in Section 6 are met).
 - Definition and implementation of the Markdown governance checks and CI workflow.
 - Final module ownership and publication author order remain deferred.
 
-This decision is **not** adopted. The consequences above describe what adoption would entail, conditioned on the ratification process in Section 6.
+This decision is **accepted and its implementation is authorized**, while the **canonical transition remains not yet effective**. The consequences above describe what the canonical adoption entails, conditioned on completion of the adoption conditions in Section 6.
 
 ## 10. Review and Ratification Record
 
 | Step | Party | State |
 | --- | --- | --- |
 | Drafting assistance | Claude Code under bounded instruction | completed |
-| Responsible human review | Edgar Axel Pérez Flores | pending |
-| Collaborator review | Naomi Sánchez Torres | pending |
-| Ratification authority | NTK-MASTER | pending |
+| Master ratification | NTK-MASTER, 17 July 2026 | completed |
+| Responsible human comparison of both transpositions | Edgar Axel Pérez Flores | pending |
+| Independent collaborator review | Naomi Sánchez Torres | pending |
+| Final scientific sign-off | Edgar Axel Pérez Flores | pending |
+| Required checks | Gate 0B foundation checks | pending |
 | Implemented in | Foundation pull request | pending |
-| Adopted foundation commit or tag | — | pending |
+| Adopted foundation merge commit or tag | — | pending |
 
-Claude Code has **no scientific, authorship, ratification, review, or Git authority**. Its role is limited to drafting this record under bounded instruction. All scientific judgment, all ratification, all review, and all Git staging, commits, and pushes are performed exclusively by the authorized human parties named above; NTK-MASTER is the sole ratification authority.
+Claude Code has **no scientific, authorship, ratification, independent-review, final-sign-off, or Git authority whatsoever**. Its role is strictly limited to drafting and amending this record under bounded instruction. It does not perform, and cannot substitute for, any scientific judgment, any authorship, the master ratification, the responsible human comparison, the independent collaborator review, the final scientific sign-off, or any Git staging, commit, push, tag, branch, or configuration action. All scientific judgment, all authorship, all comparison, all independent review, all final sign-off, and all Git operations are performed exclusively by the authorized human parties named above; NTK-MASTER is the sole ratification authority, and Edgar Axel Pérez Flores alone performs all Git operations.
 
 ## 11. Decision State
 
-- The status of this record remains **PROPOSED**.
-- No canonical governance-format transition has yet occurred.
-- The next authorized action is human review of this record and of the provenance record at `governance/provenance/ORIGINAL_RATIFICATION_INPUTS.md`, followed — only if the proposal is accepted for continued Gate 0B development — by preparation of the two Markdown transpositions.
+- `RDR-0001` is **ACCEPTED**.
+- **NTK-MASTER ratified** this record on **17 July 2026**.
+- Implementation is **AUTHORIZED**.
+- The canonical transition is **NOT YET EFFECTIVE**.
+- The adoption conditions in Section 6 remain **PENDING**.
+- **Phase 1 remains BLOCKED.**
+- **Production Python remains BLOCKED.**
+- The next authorized implementation is preparation and audit of the two Markdown transpositions — `governance/00_Scientific_Constitution_From_Newton_to_Kerr.md` and `governance/01_Project_Governance_and_Repository_Charter.md` — together with the permanent transposition audit at `governance/provenance/RDR-0001_TRANSPOSITION_AUDIT.md`. None of these files exist yet, and creating them does not make them canonical; the canonical transition becomes effective only after all adoption conditions in Section 6 are satisfied and the foundation pull request is merged through the protected-`main` workflow.
